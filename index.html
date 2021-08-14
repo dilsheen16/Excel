@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
     <title>Excel Clone</title>
 </head>
+
 <body>
     <div class="container">
         <!-- contenteditable="true" is added so we can edit it -->
         <div class="title-section" contenteditable="true">Title</div>
         <div class="menu-bar-section">
-            <div>File</div>
-            <div>File</div>
-            <div>File</div>
-            <div>File</div>
+            <div class="fileOptions">File
+                <div class="fileList"> 
+                    <div>Save</div>
+                    <div>Clear</div>
+                </div>
+            </div>
+            <div class="helpOption">Help</div>
         </div>
-        <div class="menu-options-section"></div>
+        <div class="menu-options-section">
+            <div class="styles">
+                <i class="material-icons">format_bold</i>
+                <i class="material-icons">format_italic</i>
+                <i class="material-icons">format_underlined</i>
+            </div>
+            <div class="font">
+                    <select name="font-family" id="font-family" style="font-family: 'Montserrat', sans-serif;">
+                        <option value="Arial" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
+                        <option value="Montserrat" style="font-family: 'Montserrat', sans-serif;" selected>Montserrat</option>
+                        <option value="Times New Roman" style="font-family: 'Times New Roman', Times, serif;">Times New Roman</option>
+                    </select>
+                    <select name="font-size" id="font-size">
+                        <option value="10">10</option>
+                        <option value="15" selected>15</option>
+                        <option value="20">20</option>
+                    </select>
+                <div class="font-size"></div>
+            </div>
+            <div class="alignment">
+                <i class="material-icons">format_align_left</i>
+                <i class="material-icons">format_align_center</i>
+                <i class="material-icons">format_align_right</i>
+            </div>
+            <div class="color">
+                <i class="material-icons">format_color_fill</i>
+                <i class="material-icons">format_color_text</i>
+            </div>
+        </div>
         <div class="formula-section">
             <div class="selected-cell-div"></div>
             <input type="text" class="formula-input">
@@ -35,5 +69,7 @@
         <div class="sheet-section"></div>
     </div>
     <script src="script.js"></script>
+    <script src="styleScript.js"></script>
 </body>
+
 </html>
