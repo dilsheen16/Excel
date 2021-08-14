@@ -15,6 +15,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+i,select{
+    cursor: pointer;
+}
+
 .container{
     height: 100vh;
 }  
@@ -36,14 +40,39 @@ body{
     background-color: white;
 }
 
-.container .menu-bar-section div{
+.container .menu-bar-section .fileOptions,
+.container .menu-bar-section .helpOption{
     margin-left: 3rem;
     color: black;
+    height: 100%;
+    line-height: 3rem;
+    cursor: pointer;
+}
+
+.container .menu-bar-section .fileOptions:hover, .container .menu-bar-section .fileOptions:active,
+.container .menu-bar-section .helpOption:hover, .container .menu-bar-section .helpOption:active{
+    background-color: #27ae60;
 }
 
 .container .menu-options-section{
     height: 8%;
     background-color: #2ecc71;
+    display: flex;
+}
+
+.container .menu-options-section .styles,
+.container .menu-options-section .font,
+.container .menu-options-section .alignment,
+.container .menu-options-section .color{
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid;
+}
+
+.container .menu-options-section .font{
+    width: 31%;
 }
 
 .container .formula-section{
@@ -69,6 +98,9 @@ body{
     width: 80%;
     height: 100%;
     border: 1px solid;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container .grid{
@@ -149,6 +181,7 @@ body{
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.411);
     flex-shrink: 0; 
+    font-size: 15px;
 }
 
 .cell-selected{
@@ -159,3 +192,53 @@ body{
     display: flex;
 }
 
+.fileList{
+    margin-left: 0;
+    position: absolute;
+    /* position: relative; */
+    border: 1px solid;
+    background-color: white;
+    width: 6rem;
+    height: 5rem;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 6rem;
+}
+
+.fileList div{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.fileList div:first-child{
+    border-bottom: 1px solid;
+}
+
+.fileList div:hover{
+    background-color: #2ecc71;
+}
+
+/* .modal-content {
+    height: 25rem;
+    display: none;
+    width: 35rem;
+    position: fixed;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #27ae60;
+    z-index: 2;
+  }*/
+.modal{
+    z-index: 1;
+    width: 100%; 
+    height: 100%; 
+    background-color: tomato;
+    /* background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);  */
+}
